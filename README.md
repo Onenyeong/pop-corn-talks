@@ -160,7 +160,6 @@ JDK 17
             String.valueOf(saveProduct.getAmount()));
     }
     ```
-    ![Untitled](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/335e3020-8197-494c-b073-eceb43a28284)
     
     
     
@@ -203,11 +202,8 @@ JDK 17
         - **100명의 사용자가 1초에 10번 접속**
         - **게시물 100,000 개 등록**
 
-            ![Untitled (1)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/9a8bb1a2-6fb8-4efe-ae91-020fdba083b6)
 
-            ![Untitled (2)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/529f8a24-f1ae-4ccf-8a72-88fce69c9b81)
 
-            ![Untitled (3)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/bf1e53f6-0aa1-4d62-b648-3ce2685503dc)
 
 
         - 적용 전 -> Post_createdAt 적용 후 :  33.2/s => 259.1/s   **7.8 배 TPS 향상**
@@ -222,11 +218,8 @@ JDK 17
     - **[테스트 조건]**
     - **100명의 사용자가 1초에 10번 접속하는 상황**
  
-        ![Untitled (4)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/9ab90ad2-fb08-493e-85da-13c1c14601c5)
         
-        ![Untitled (5)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/fb9fee20-a98e-429a-be54-e522afff37ef)
 
-        ![Untitled (6)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/8ac89f12-f853-4a4d-80d2-ade7daee1ebf)
 
         
     - **DB에 조회 쿼리 최초 1회 발생,**  **DB 부하↓**
@@ -234,7 +227,6 @@ JDK 17
     
     **그라파나 적용으로 System Cpu 사용량 측정**
     
-      ![Untitled (7)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/5a3524a2-33fb-49a7-87ea-7df881dfad25)
 
     
     - 적용 전: System CPU 사용량 0.291
@@ -258,9 +250,7 @@ JDK 17
     - 100명의 사용자가 1초에 10번 접속하는 상황
     - Get요청은 100,000건의 데이터 중 10개의 특정한 데이터를 조회
     
-    ![Untitled (8)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/d0fd6149-765a-4ed8-928c-9107ca8caecd)
 
-    ![Untitled (9)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/466bc31e-63b1-483e-9939-2d71d6ff6269)
   
     - 읽기 :  21.8/s => 29.7/s   **36.2% TPS 향상**
     - 쓰기 :  23.0/s => 28.6/s   **24.3% TPS 향상**(post, post2의 평균값으로 계산)
@@ -278,9 +268,7 @@ JDK 17
     - 하나의 서버에서 만 실행되어야 하기에 Spring batch, AWS Lambda를 이용하여 지정된 시간에 스케쥴링을 실행할 수 있다고 판단
     - Spring batch는 스케쥴링 기능은 있지만 대용량 데이터 자동화 처리에서 사용하기 위해 나왔으며, 별도의 서버를 설치 및 구성해야 한다는 점에서 AWS에서 제공하는 서버리스 서비스인 Lambda와 EventBridge를 이용하여 스케쥴링을 구현
         
-        ![Untitled (10)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/1d76e60f-5f83-4aea-ac51-0c59319ecc00)
 
-        ![Untitled (11)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/2c7fe37e-2d7c-4f5a-8830-4bfeaf46dbef)
 
         
     - Lambda에 실행 할 Http 메소드를 기재하고 원하는 시간에 EventBridge에서 이벤트를 발생시켜서 Lambda가 실행되도록 설정
@@ -298,7 +286,6 @@ JDK 17
     
     - 싱글쓰레드로 동작하는 Redis의 특성을 이용, hashTable을 통한 상품재고 관리 및 동시성 제어
         
-        ![Untitled (12)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/d896cd70-ec73-40e8-8632-60eb1d6fa88a)
 
         
         ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/dbd4ff39-ad6f-40fd-8f86-820a7fee51cf/Untitled.png)
