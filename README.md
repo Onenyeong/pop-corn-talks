@@ -203,12 +203,12 @@ JDK 17
         - **100명의 사용자가 1초에 10번 접속**
         - **게시물 100,000 개 등록**
             
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/6fd0de8e-d47a-413b-93a4-b13d9d98807b/Untitled.png)
-            
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/a4fa3137-a66c-4e5c-ba62-e5adf22403c1/Untitled.png)
-            
-            ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/22564eee-e8db-4844-8a33-9c10268bc82b/Untitled.png)
-            
+            ![Untitled (1)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/9a8bb1a2-6fb8-4efe-ae91-020fdba083b6)
+
+            ![Untitled (2)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/529f8a24-f1ae-4ccf-8a72-88fce69c9b81)
+
+            ![Untitled (3)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/5f874b54-0923-4b74-9d88-2ac3e41d082b)
+
         - 적용 전 -> Post_createdAt 적용 후 :  33.2/s => 259.1/s   **7.8 배 TPS 향상**
 
 ### 캐싱
@@ -221,16 +221,19 @@ JDK 17
     - **[테스트 조건]**
     - **100명의 사용자가 1초에 10번 접속하는 상황**
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/94e4a0ca-9423-4f2a-b1c7-2c566e8f2ae8/Untitled.png)
+        ![Untitled (4)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/11beeacd-f689-4ace-9d2e-6b375a955c81)
+
+        ![Untitled (5)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/9d0403d4-b037-4605-95ce-fa97edc0c62c)
+
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/6e2720cc-276b-46e5-89f4-3ed91879aa85/Untitled.png)
         
     - **DB에 조회 쿼리 최초 1회 발생,**  **DB 부하↓**
     - **캐시에 등록되기 때문에 TPS는 큰 의미 X**
     
     **그라파나 적용으로 System Cpu 사용량 측정**
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/abdd2854-92a7-47eb-bd0c-cc1775d8ab0d/Untitled.png)
+    ![Untitled (6)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/4fae4685-1992-4f89-a53c-faad1c0c24cc)
+
     
     - 적용 전: System CPU 사용량 0.291
     - 적용 후: System CPU 사용량 0.236
@@ -253,9 +256,11 @@ JDK 17
     - 100명의 사용자가 1초에 10번 접속하는 상황
     - Get요청은 100,000건의 데이터 중 10개의 특정한 데이터를 조회
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/17327548-2f8d-4909-98c2-fc2f2c5063e1/Untitled.png)
+    ![Untitled (7)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/600d5d2e-9e91-4987-a240-f0600f993154)
+
+    ![Untitled (8)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/e577bdf2-8978-4f78-a4c0-d83fb60d2e3f)
+
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/5f1a821f-9a73-42d7-a275-12cb31fa226d/Untitled.png)
     
     - 읽기 :  21.8/s => 29.7/s   **36.2% TPS 향상**
     - 쓰기 :  23.0/s => 28.6/s   **24.3% TPS 향상**(post, post2의 평균값으로 계산)
@@ -273,9 +278,10 @@ JDK 17
     - 하나의 서버에서 만 실행되어야 하기에 Spring batch, AWS Lambda를 이용하여 지정된 시간에 스케쥴링을 실행할 수 있다고 판단
     - Spring batch는 스케쥴링 기능은 있지만 대용량 데이터 자동화 처리에서 사용하기 위해 나왔으며, 별도의 서버를 설치 및 구성해야 한다는 점에서 AWS에서 제공하는 서버리스 서비스인 Lambda와 EventBridge를 이용하여 스케쥴링을 구현
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/cb6f8938-174f-4e44-a6c9-47b739b3bb8c/Untitled.png)
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/04eee618-fb00-4dde-9923-a4489147ffb2/Untitled.png)
+        ![Untitled (10)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/1d76e60f-5f83-4aea-ac51-0c59319ecc00)
+
+        ![Untitled (11)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/2c7fe37e-2d7c-4f5a-8830-4bfeaf46dbef)
+
         
     - Lambda에 실행 할 Http 메소드를 기재하고 원하는 시간에 EventBridge에서 이벤트를 발생시켜서 Lambda가 실행되도록 설정
 
@@ -292,7 +298,8 @@ JDK 17
     
     - 싱글쓰레드로 동작하는 Redis의 특성을 이용, hashTable을 통한 상품재고 관리 및 동시성 제어
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/6a75b50a-9821-48a9-b276-90b43a0402d2/Untitled.png)
+        ![Untitled (12)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/d896cd70-ec73-40e8-8632-60eb1d6fa88a)
+
         
         ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/dbd4ff39-ad6f-40fd-8f86-820a7fee51cf/Untitled.png)
         
