@@ -65,7 +65,7 @@
 #Pop-Corn-Talk #CinemaCommunity #EarnRewards #MovieMagic #SNS
 
 ---
-### ## Stacks 
+## Stacks 
 
 ### Backend
 
