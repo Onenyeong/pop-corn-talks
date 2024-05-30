@@ -161,7 +161,7 @@ JDK 17
     }
     ```
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/8e691551-5a48-4ea7-9aa5-44717f4f75d3/Untitled.png)
+    ![Untitled](https://pro![Untitled](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/73d51698-4540-479e-85e5-d2745723c6aa)
     
     redis에 상품 id 와 상품 수량을 등록
     
