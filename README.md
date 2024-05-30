@@ -160,7 +160,8 @@ JDK 17
             String.valueOf(saveProduct.getAmount()));
     }
     ```
-    
+    ![Untitled](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/b3e7db20-c97a-4965-8e98-b8f81968f3ce)
+
     
     
     redis에 상품 id 와 상품 수량을 등록
@@ -202,10 +203,10 @@ JDK 17
         - **100명의 사용자가 1초에 10번 접속**
         - **게시물 100,000 개 등록**
 
-
-
-
-
+        ![Untitled (1)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/37cb3dfa-5acc-4e0b-bdc2-c0ace54a6c20)
+        ![Untitled (2)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/ee6700e0-d0c7-4d6d-8f45-b017ca2d85ad)
+        ![Untitled (3)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/d2a95fa9-26bf-4b42-92b9-79fa88b45acb)
+      
         - 적용 전 -> Post_createdAt 적용 후 :  33.2/s => 259.1/s   **7.8 배 TPS 향상**
 
 ### 캐싱
@@ -218,10 +219,7 @@ JDK 17
     - **[테스트 조건]**
     - **100명의 사용자가 1초에 10번 접속하는 상황**
  
-        
-
-
-        
+      
     - **DB에 조회 쿼리 최초 1회 발생,**  **DB 부하↓**
     - **캐시에 등록되기 때문에 TPS는 큰 의미 X**
     
