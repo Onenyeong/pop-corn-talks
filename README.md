@@ -218,14 +218,16 @@ JDK 17
 - [Test]
     - **[테스트 조건]**
     - **100명의 사용자가 1초에 10번 접속하는 상황**
- 
-      
+      ![Untitled (4)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/67459aea-3e07-4f8d-9ed1-83f80654780c)
+      ![Untitled (5)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/65895e1c-270a-41d4-8822-5b4875f96548)
+
+
     - **DB에 조회 쿼리 최초 1회 발생,**  **DB 부하↓**
     - **캐시에 등록되기 때문에 TPS는 큰 의미 X**
     
     **그라파나 적용으로 System Cpu 사용량 측정**
-    ![Untitled (6)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/ad86d88c-efc4-4bf1-a8ed-55a0ef1725e8)
 
+    ![Untitled (6)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/a6977cd2-371c-49c1-a99e-3cbb78ae4173)
 
     
     - 적용 전: System CPU 사용량 0.291
@@ -249,6 +251,8 @@ JDK 17
     - 100명의 사용자가 1초에 10번 접속하는 상황
     - Get요청은 100,000건의 데이터 중 10개의 특정한 데이터를 조회
     
+      ![Untitled (7)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/3279180b-1ab4-473b-9ace-76aa1a7f01ab)
+      ![Untitled (8)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/46c83aed-b143-4782-b215-ee56fa0c1b80)
 
   
     - 읽기 :  21.8/s => 29.7/s   **36.2% TPS 향상**
@@ -266,10 +270,8 @@ JDK 17
 - [해결 과정]
     - 하나의 서버에서 만 실행되어야 하기에 Spring batch, AWS Lambda를 이용하여 지정된 시간에 스케쥴링을 실행할 수 있다고 판단
     - Spring batch는 스케쥴링 기능은 있지만 대용량 데이터 자동화 처리에서 사용하기 위해 나왔으며, 별도의 서버를 설치 및 구성해야 한다는 점에서 AWS에서 제공하는 서버리스 서비스인 Lambda와 EventBridge를 이용하여 스케쥴링을 구현
-        
-
-
-        
+        ![Untitled (9)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/db75c910-e0c0-4e84-bbd0-8237adae72f6)
+        ![Untitled (10)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/fae04004-82b9-46ae-a90e-188af1579c5f)
     - Lambda에 실행 할 Http 메소드를 기재하고 원하는 시간에 EventBridge에서 이벤트를 발생시켜서 Lambda가 실행되도록 설정
 
 ### 동시성 제어
@@ -284,11 +286,9 @@ JDK 17
     [해결 과정]
     
     - 싱글쓰레드로 동작하는 Redis의 특성을 이용, hashTable을 통한 상품재고 관리 및 동시성 제어
-        
-
-        
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/dbd4ff39-ad6f-40fd-8f86-820a7fee51cf/Untitled.png)
-        
+      ![Untitled (11)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/1cfe5d31-8228-4c6c-a30b-f3ec302cf65e)
+      ![Untitled (12)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/081b0872-827f-4246-849b-5c310d99de4b)
+      
 - [문제 상황 2]
     - 관리자가 상품의 정보를 수정 및 삭제 하는 과정에서 유저의 상품 구매 요청이 성공하는 상황 발생
     
@@ -379,8 +379,8 @@ JDK 17
 - [해결 방법]
     - refresh 토큰이 저장되어 있는 cache 에 가장 최근에 발급한 Access 토큰을 포함 시켜서 새로운 토큰 발급 요청 시 로그인 할 때 전달한 Access 토큰 까지 검증
     
-    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/4e99eec5-f553-46fd-bdd6-375686f2a00c/637b5012-3418-4027-9332-c9a1b3976d10/Untitled.png)
-    
+    ![Untitled (13)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/4aefc09c-c86f-417b-a5ca-9e1b2efb7270)
+
 
 ### RedisConfig의 복수의 CacheManager 문제
 
