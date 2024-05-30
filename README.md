@@ -66,7 +66,7 @@
 
 ---
 ## Stacks 
-
+---
 ### Backend
 
 - Java  17
@@ -75,7 +75,7 @@
 - Redis 7.1.0
 - SSE
 - Log4j2
-
+---
 ### Infra
 
 - Docker
@@ -89,9 +89,9 @@
     - RDS(Aurora MySQL)
     - Elasticache
     - S3
-
+---
 ### FrontEnd
-
+---
 - React
 
 
