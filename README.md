@@ -160,8 +160,8 @@ JDK 17
             String.valueOf(saveProduct.getAmount()));
     }
     ```
-    ![Untitled](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/589396ee-c105-46a7-9543-69df5ccc612b)
-
+    ![Untitled](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/335e3020-8197-494c-b073-eceb43a28284)
+    
     
     
     redis에 상품 id 와 상품 수량을 등록
@@ -202,7 +202,6 @@ JDK 17
     - **[테스트 조건]**
         - **100명의 사용자가 1초에 10번 접속**
         - **게시물 100,000 개 등록**
-            ![Untitled](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/335e3020-8197-494c-b073-eceb43a28284)
 
             ![Untitled (1)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/9a8bb1a2-6fb8-4efe-ae91-020fdba083b6)
 
