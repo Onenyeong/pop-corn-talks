@@ -224,7 +224,8 @@ JDK 17
     - **캐시에 등록되기 때문에 TPS는 큰 의미 X**
     
     **그라파나 적용으로 System Cpu 사용량 측정**
-    
+    ![Untitled (6)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/ad86d88c-efc4-4bf1-a8ed-55a0ef1725e8)
+
 
     
     - 적용 전: System CPU 사용량 0.291
