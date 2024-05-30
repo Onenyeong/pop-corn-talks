@@ -160,8 +160,9 @@ JDK 17
             String.valueOf(saveProduct.getAmount()));
     }
     ```
+    ![Untitled](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/589396ee-c105-46a7-9543-69df5ccc612b)
+
     
-    ![Untitled](https://pro![Untitled](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/73d51698-4540-479e-85e5-d2745723c6aa)
     
     redis에 상품 id 와 상품 수량을 등록
     
