@@ -207,6 +207,7 @@ JDK 17
 
             ![Untitled (2)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/529f8a24-f1ae-4ccf-8a72-88fce69c9b81)
 
+            ![Untitled (3)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/bf1e53f6-0aa1-4d62-b648-3ce2685503dc)
 
 
         - 적용 전 -> Post_createdAt 적용 후 :  33.2/s => 259.1/s   **7.8 배 TPS 향상**
@@ -221,19 +222,19 @@ JDK 17
     - **[테스트 조건]**
     - **100명의 사용자가 1초에 10번 접속하는 상황**
  
-        ![Untitled (3)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/5f874b54-0923-4b74-9d88-2ac3e41d082b)
-        ![Untitled (4)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/11beeacd-f689-4ace-9d2e-6b375a955c81)
-
-        ![Untitled (5)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/9d0403d4-b037-4605-95ce-fa97edc0c62c)
-
+        ![Untitled (4)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/9ab90ad2-fb08-493e-85da-13c1c14601c5)
         
+        ![Untitled (5)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/fb9fee20-a98e-429a-be54-e522afff37ef)
+
+        ![Untitled (6)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/8ac89f12-f853-4a4d-80d2-ade7daee1ebf)
+
         
     - **DB에 조회 쿼리 최초 1회 발생,**  **DB 부하↓**
     - **캐시에 등록되기 때문에 TPS는 큰 의미 X**
     
     **그라파나 적용으로 System Cpu 사용량 측정**
     
-    ![Untitled (6)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/4fae4685-1992-4f89-a53c-faad1c0c24cc)
+      ![Untitled (7)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/5a3524a2-33fb-49a7-87ea-7df881dfad25)
 
     
     - 적용 전: System CPU 사용량 0.291
@@ -257,12 +258,10 @@ JDK 17
     - 100명의 사용자가 1초에 10번 접속하는 상황
     - Get요청은 100,000건의 데이터 중 10개의 특정한 데이터를 조회
     
-    ![Untitled (7)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/600d5d2e-9e91-4987-a240-f0600f993154)
+    ![Untitled (8)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/d0fd6149-765a-4ed8-928c-9107ca8caecd)
 
-    ![Untitled (8)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/e577bdf2-8978-4f78-a4c0-d83fb60d2e3f)
-
-    
-    
+    ![Untitled (9)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/466bc31e-63b1-483e-9939-2d71d6ff6269)
+  
     - 읽기 :  21.8/s => 29.7/s   **36.2% TPS 향상**
     - 쓰기 :  23.0/s => 28.6/s   **24.3% TPS 향상**(post, post2의 평균값으로 계산)
     - 합계 :  63.7/s => 83.3/s   **30.7% TPS 향상**
