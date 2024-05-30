@@ -67,15 +67,32 @@
 ---
 ### ## Stacks 
 
-* <img  src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
-* <img  src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-* <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
-* <img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
-* <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
-* <img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
-- [![React](https://camo.githubusercontent.com/6c3957842901e5baa389f3bb8758c8966683333b28493013062fcab5fab645e7/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d3230323332413f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d363144414642)](https://reactjs.org/)
-- [![Mockito](https://img.shields.io/badge/Mockito-blue?style=for-the-badge&logo=mockito)](https://site.mockito.org/)
+### Backend
 
+- Java  17
+- SpringBoot  3.2.4
+- MySQL  8.0
+- Redis 7.1.0
+- SSE
+- Log4j2
+
+### Infra
+
+- Docker
+- Github Actions
+- AWS
+    - EC2
+    - ECS (Fargate)
+    - ECR
+    - FARGATE
+    - Lambda (EventBridge)
+    - RDS(Aurora MySQL)
+    - Elasticache
+    - S3
+
+### FrontEnd
+
+- React
 
 
 ---
