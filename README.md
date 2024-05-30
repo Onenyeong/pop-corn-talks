@@ -202,7 +202,8 @@ JDK 17
     - **[테스트 조건]**
         - **100명의 사용자가 1초에 10번 접속**
         - **게시물 100,000 개 등록**
-            
+            ![Untitled](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/335e3020-8197-494c-b073-eceb43a28284)
+
             ![Untitled (1)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/9a8bb1a2-6fb8-4efe-ae91-020fdba083b6)
 
             ![Untitled (2)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/529f8a24-f1ae-4ccf-8a72-88fce69c9b81)
