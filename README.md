@@ -208,7 +208,7 @@ JDK 17
 
             ![Untitled (2)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/529f8a24-f1ae-4ccf-8a72-88fce69c9b81)
 
-            ![Untitled (3)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/5f874b54-0923-4b74-9d88-2ac3e41d082b)
+
 
         - 적용 전 -> Post_createdAt 적용 후 :  33.2/s => 259.1/s   **7.8 배 TPS 향상**
 
@@ -221,7 +221,8 @@ JDK 17
 - [Test]
     - **[테스트 조건]**
     - **100명의 사용자가 1초에 10번 접속하는 상황**
-        
+ 
+        ![Untitled (3)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/5f874b54-0923-4b74-9d88-2ac3e41d082b)
         ![Untitled (4)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/11beeacd-f689-4ace-9d2e-6b375a955c81)
 
         ![Untitled (5)](https://github.com/Onenyeong/pop-corn-talks/assets/108345184/9d0403d4-b037-4605-95ce-fa97edc0c62c)
